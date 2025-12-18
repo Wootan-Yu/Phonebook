@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Phonebook App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <header class="app-header">
+        <h1>Phonebook</h1>
+    </header>
+
+    <main class="app-container">
+        <!-- Add Contact Form -->
+        <section class="card">
+            <h2>Add Contact</h2>
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Enter name" required />
+
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter Email" required />
+
+                <label for="phone">Phone</label>
+                <input id="phone" type="tel" placeholder="Enter phone number" required />
+
+                <label for="profileImage">Profile Picture (optional)</label>
+                <input id="picture" type="file">
+                <br>
+                <br>
+                <button type="submit" class="btn-primary">Add Contact</button>
+            </form>
+        </section>
+
+        <!-- Search -->
+        <section class="card">
+            <h2>Search</h2>
+            <input
+                id="search"
+                type="text"
+                placeholder="Search by name"
+                autocomplete="off"
+            />
+        </section>
+
+        <!-- Contact List -->
+        <section class="card">
+            <h2>Contacts</h2>
+            <ul id="contactList" class="contact-list">
+                <!-- Contacts will be rendered here -->
+            </ul>
+            <p id="emptyState" class="empty-state">No contacts yet.</p>
+        </section>
+    </main>
+
+    <!-- Cordova file (injected by Cordova at build/run time) -->
+    <script src="cordova.js"></script>
+    
+    <!-- App logic -->
+    <script src="js/index.js"></script>
+</body>
+</html>
