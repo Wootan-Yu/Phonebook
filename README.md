@@ -1,2 +1,0 @@
-# Phonebook
-WMS project
